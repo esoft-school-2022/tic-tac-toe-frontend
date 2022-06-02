@@ -3,6 +3,7 @@ import {Navigate} from 'react-router';
 import {observer} from 'mobx-react';
 import {StoreContext} from '../../stores';
 import './styles.css';
+import dogeImg from './doge.png';
 
 class Login extends React.Component {
   static contextType = StoreContext;
@@ -37,7 +38,7 @@ class Login extends React.Component {
     return (
       !this.context.AuthStore.isLoggedIn ?
         <main className="box box_sm box_centered app__content app__content_centered login">
-          <img className="login__doge" src="/assets/img/doge.png" alt="Дог"/>
+          <img className="login__doge" src={dogeImg} alt="Дог"/>
           <h1 className="text text_title login__title">Войдите в игру</h1>
           <form className="form login__form">
             <div className="input form__field">

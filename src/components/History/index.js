@@ -4,6 +4,7 @@ import {StoreContext} from '../../stores';
 import './styles.css';
 import {ReactComponent as CircleIcon} from './circle.svg';
 import {ReactComponent as CrossIcon} from './cross.svg';
+import trophyImg from './trophy.png';
 
 class History extends React.Component {
   static contextType = StoreContext;
@@ -39,7 +40,7 @@ class History extends React.Component {
                       {playerTwo}
                       {
                         winner === 2 &&
-                        <img className="history__trophy" src="/assets/img/trophy.png" alt="Победитель"/>
+                        <img className="history__trophy" src={trophyImg} alt="Победитель"/>
                       }
                     </th>
                     <th className="text table__cell history__versus">против</th>
@@ -48,7 +49,7 @@ class History extends React.Component {
                       {playerOne}
                       {
                         winner === 1 &&
-                        <img className="history__trophy" src="/assets/img/trophy.png" alt="Победитель"/>
+                        <img className="history__trophy" src="/src/components/History/trophy.png" alt="Победитель"/>
                       }
                     </th>
                     <th className="text table__cell">{new Date(createdAt).toDateString().slice(4)}</th>
